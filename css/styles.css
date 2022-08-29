@@ -3,6 +3,7 @@
 /* variables */
 :root {
     --clr-primary: #678e3e;
+    --clr-primary-medium: #9cc473;
     --clr-primary-light: #beed8c;
     --clr-grey-1: #102a42;
     --clr-grey-5: #617d98;
@@ -28,6 +29,7 @@ body {
     color: var(--clr-grey-1);
     line-height: 1.5;
     font-size: 0.875rem;
+    overflow-x: hidden;
 }
 
 a {
@@ -79,11 +81,46 @@ p {
     border: none;
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0,0,0, 0.2);
+    border-radius: 6px;
 }
 
 .btn:hover {
     color: var(--clr-primary);
     background: var(--clr-primary-light);
+}
+
+.clearfix::after,.clearfix::before {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.section-center {
+    padding: 4rem 0;
+    width: 85vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+.section-title {
+    margin-bottom: 2rem;
+}
+
+.section-title h3 {
+    font-family: var(--ff-secondary);
+    color: var(--clr-primary);
+}
+
+.section-title h2 {
+    font-family: var(--ff-primary);
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width:992px) {
+    .section-center {
+        width: 95vw;
+        padding: 4rem 1rem;
+    }
 }
 
 /* ========= header ========== */
@@ -121,13 +158,180 @@ p {
     outline-offset: 0.25rem;
     font-size: 1.25rem;
     padding: 1rem 1.7rem;
+    border-radius: 0;
 } 
 
 .banner-btn:hover {
     outline-offset: 0.5rem;
 }
 
+/* ===== content devider ===== */
+.content-devider {
+    width: 100vw;
+    height: 0.5rem;
+    background: linear-gradient(
+        to left, 
+        var(--clr-primary), 
+        #e9b949, 
+        var(--clr-primary)
+    );
+}
+
+/* skills */
+.skills {
+    background: var(--clr-grey-10);
+}
+
+.skill {
+    display: inline-block;
+    text-align: center;
+    padding: 2rem 0;
+    transition: var(--transition);
+    border-bottom: 0px solid #9cc47300;
+}
+
+.skill-icon {
+    display: inline-block;
+    color: var(--clr-primary);
+    font-size: 3rem;
+    transition: var(--transition);
+    top: 0;
+}
+
+.skill-title {
+    font-size: 1.4rem;
+}
+
+.skill-text {    
+    width: 50%;
+    margin: 0 auto;
+}
+
+.skill:hover .skill-icon {
+    transform: translateY(-5%);
+    color: var(--clr-primary-medium);
+}
+
+.skill:hover {
+    background: var(--clr-white);
+    box-shadow: 0 2px var(--clr-primary-medium);
+}
+
+.temp {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: var(--clr-grey-5)
+}
+
+.about-img,
+.about-info {
+    margin: 2rem 0;
+}
+
+.about-picture-container {
+    background: var(--clr-primary);
+    border: 0.5rem solid var(--clr-primary);
+    max-width: 30rem;
+    overflow: hidden;
+}
+
+.about-picture {
+    transition: var(--transition);
+    transform: scale(100%);
+}
+
+.about-picture-container:hover .about-picture {
+    transform: scale(120%);
+    opacity: 0.5;
+}
+
+.about-text,
+.check-out-text {
+    max-width: 26rem;
+}
+
+.grey {
+    background: var(--clr-grey-10);
+}
+
+.check-out-picture-container img {
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+    height: 20rem;
+    object-fit: cover;
+    box-shadow: 3px 3px 5px rgb(141, 141, 141);
+    transition: var(--transition);
+}
+
+@media screen and (min-width:768px) {
+    .check-out-picture-container {
+        width: 50%;
+        float: left;
+        padding-right: 2rem;
+    }
+
+    
+.check-out-picture-container img:hover {
+    transform: scale(110%);
+    box-shadow: 6px 6px 10px rgb(85, 85, 85);
+    cursor: pointer;
+}
+}
+
+@media screen and (min-width:992px) {
+    .about-img,
+    .about-info {
+        width: 50%;
+        float: left;
+    }
+    
+    .about-info {
+        padding-left: 5rem;
+    }
+
+    .check-out-picture-container {
+        width: 33.33%;
+        float: left;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .check-out-picture-container,
+    .check-out-info {
+        width: 25%;
+        float: left;
+    }
+
+    .check-out-info {
+        padding: 2rem 0;
+    }
+}
+
+
+
 /* ====== media queries ====== */
+@media screen and (min-width:567px) {
+
+    .skill {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media screen and (min-width:993px) {
+
+}
+
+@media screen and (min-width:1200px) {
+
+    .skill {
+        width: 25%;
+        float: left;
+    }
+}
+
+
 @media screen and (min-width:800px) {
 
     body {
