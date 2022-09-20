@@ -18,9 +18,27 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav class="nav"><h1>G-Station</h1></nav>
+    <nav class="navbar" id="navbar">
+      <div class="nav-close" id="nav-close"><i class="fas fa-times"></i></div>
+      <ul>
+        <li><div class="item-link" id="home-link">home</a></li>
+        <li><div class="item-link" id="skills-link">skills</div></li>
+        <li><div class="item-link" id="about-link">about</div></li>
+        <li><div class="item-link" id="products-link">products</div></li>
+        <li><div class="item-link" id="services-link">services</div></li>
+        <li><div class="item-link" id="contact-link">contact</div></li>
+      </ul>
+    </nav>
     <!-- header -->
-    <header class="header">
+    <header class="header" id="header">
+      <div class="nav">
+        <h1>G-Station</h1>
+        <div class="nav-button" id="nav-button">
+          <div class="top"></div>
+          <div class="middle"></div>
+          <div class="bottom"></div>
+        </div>
+      </div>
       <div class="banner">
         <h2>over one hundred flavors of</h2>
         <h1>
@@ -35,7 +53,7 @@
     <div class="content-devider"></div>
     <!-- end of content devider -->
     <!-- skills section -->
-    <section class="skills clearfix">
+    <section class="skills clearfix" id="skills">
       <!-- skill -->
       <article class="skill">
         <span class="skill-icon">
@@ -88,7 +106,7 @@
     <!-- end of skills section -->
     <!-- about -->
     <section>
-      <div class="section-center clearfix">
+      <div class="section-center clearfix" id="about">
         <!-- about image -->
         <article class="about-img">
           <div class="about-picture-container">
@@ -122,7 +140,7 @@
     <!-- end of about -->
     <!-- check out -->
     <section class="grey">
-      <div class="section-center clearfix">
+      <div class="section-center clearfix" id="products">
         <!-- check out info -->
         <article class="check-out-info">
           <div class="section-title">
@@ -175,7 +193,7 @@
     <!-- end of check out -->
 
     <!-- services -->
-    <section class="services">
+    <section class="services" id="services">
       <!-- section title -->
       <div class="section-title services-title">
         <h3>explore</h3>
@@ -255,7 +273,7 @@
     </section>
 
     <!-- contact us -->
-    <section class="contact-us">
+    <section class="contact-us" id="contact">
       <div class="section-center clearfix">
         <!-- contact information -->
         <article class="contact-info">
@@ -306,8 +324,24 @@
       </div>
     </section>
 
+    <!-- footer -->
+    <footer class="footer">
+      <div class="section-center">
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+        <h4 class="footer-text">
+          &copy2022 | <span class="footer-tea">tea station</span> | all rights
+          reserved
+        </h4>
+        <h4 class="back-to-top" id="back-to-top">BACK TO THE TOP</h4>
+      </div>
+    </footer>
+
     <!-- temporary content -->
-    <div class="temp"></div>
+    <!-- <div class="temp"></div> -->
 
     <script src="app.js"></script>
   </body>

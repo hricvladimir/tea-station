@@ -22,6 +22,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-margin-top: 3rem;
 }
 
 body {
@@ -125,6 +126,9 @@ p {
 }
 /* navbar */
 .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     width: 100vw;
     height: 3rem;
@@ -144,6 +148,101 @@ p {
 .nav h1:hover {
     color: var(--clr-grey-1);
     cursor: pointer;
+}
+
+.nav-button {
+    display: inline-block;
+    margin-right: 2rem;
+    transition: var(--transition);
+}
+
+.top,
+.middle,
+.bottom {
+    width: 36px;
+    height: 5px;
+    background: #222;
+    margin-bottom: 6px;
+    margin-top: 4px;
+}
+
+.nav-button:hover {
+    cursor: pointer;
+    scale: 1.2;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 20;
+    background: var(--clr-grey-10);
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: var(--transition);
+}
+
+.nav-close {
+    font-size: 4rem;
+    position: relative;
+    display: flex;
+    justify-content: right;
+    margin-right: 2rem;
+    color: #f29c9c;
+}
+.nav-close i {
+    transition: var(--transition);
+}
+
+.nav-close i:hover {
+    cursor: pointer;
+    color: #bb2525;
+}
+
+.navbar ul {
+    list-style: none;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--clr-grey-5);
+    letter-spacing: 0.2rem;
+}
+
+.navbar ul li {
+    padding-left: 1rem;
+    transition: var(--transition);
+}
+
+.navbar ul li a {
+    color: var(--clr-grey-5);
+}
+
+.navbar ul li:hover {
+    cursor: pointer;
+    background: var(--clr-primary-light);
+}
+
+.showNav {
+    transform: translateX(0);
+}
+
+.item-link {
+    transition: var(--transition);
+    display: block;
+}
+
+.navbar ul li:hover .item-link {
+    transform: translateX(1%);
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        top: 3rem;
+        max-width: 20rem;
+        width: 30vw;
+    }
+
+    .navbar i {
+        margin-right: -1rem;
+    }
 }
 
 /* ========= header ========== */
@@ -530,6 +629,53 @@ p {
 @media screen and (min-width:993px) {
     .contact-item h4 {
         font-size: 150%;
+    }
+}
+
+.footer {
+    text-align: center;
+    background: #222;
+    color: white;
+    
+}
+
+.footer, .footer h4 {
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.footer .social-icons {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.footer .social-icons i {
+    padding: 0.5rem;
+    transition: var(--transition);
+}
+
+.footer .social-icons i:hover {
+    cursor: pointer;
+    color: var(--clr-primary);
+}
+
+.footer .back-to-top {
+    margin-top: 1.5rem;
+    transition: var(--transition);
+}
+
+.footer .back-to-top:hover {
+    cursor: pointer;
+    color: var(--clr-grey-5);
+}
+
+.footer-tea {
+    color: var(--clr-primary);
+}
+
+@media screen and (min-width: 993px) {
+    .footer i{
+        font-size: 140%;
     }
 }
 
