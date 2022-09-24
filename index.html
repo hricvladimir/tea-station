@@ -45,7 +45,7 @@
           specially <br />
           crafted tea
         </h1>
-        <a href="./about.html" class="btn banner-btn">EXPLORE</a>
+        <div id="explore-link" class="btn banner-btn">EXPLORE</div>
       </div>
     </header>
     <!-- end of header -->
@@ -132,7 +132,7 @@
               Accusantium soluta blanditiis quaerat assumenda. Aperiam
               aspernatur eum voluptas quas modi consequatur.
             </p>
-            <a href="about.html" class="btn">learn more</a>
+            <a href="preparing.html" class="btn">learn more</a>
           </div>
         </article>
       </div>
@@ -151,7 +151,7 @@
               Accusantium soluta blanditiis quaerat assumenda. Aperiam
               aspernatur eum voluptas quas modi consequatur.
             </p>
-            <a href="about.html" class="btn">our inventory</a>
+            <a href="preparing.html" class="btn">our inventory</a>
           </div>
         </article>
         <!-- check out images -->
@@ -220,7 +220,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Repudiandae reiciendis reprehenderit cupiditate maxime, hic odio.
             </p>
-            <a href="products.html" class="btn service-btn">read more</a>
+            <a href="preparing.html" class="btn service-btn">read more</a>
           </div>
         </article>
 
@@ -243,7 +243,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Repudiandae reiciendis reprehenderit cupiditate maxime, hic odio.
             </p>
-            <a href="products.html" class="btn service-btn">read more</a>
+            <a href="preparing.html" class="btn service-btn">read more</a>
           </div>
         </article>
 
@@ -266,7 +266,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Repudiandae reiciendis reprehenderit cupiditate maxime, hic odio.
             </p>
-            <a href="products.html" class="btn service-btn">read more</a>
+            <a href="preparing.html" class="btn service-btn">read more</a>
           </div>
         </article>
       </div>
@@ -308,18 +308,20 @@
               </span>
               email
             </h4>
-            <h4 class="contact-text">johndoe@gmail.com</h4>
+            <h4 class="contact-text" id="contact-email">johndoe@gmail.com</h4>
           </div>
         </article>
         <!-- contact form -->
         <article class="contact-form">
           <h3>contact us</h3>
-          <form action="../tea-station/index.html">
-            <input type="text" id="name" placeholder="NAME" />
-            <input type="email" placeholder="EMAIL" />
-            <textarea placeholder="PLEASE TYPE YOUR MESSAGE HERE"></textarea>
-            <input type="submit" class="btn contact-us-btn" value="Submit">
+          <form>
+            <input class="form-input" name="name" type="text" id="name" placeholder="NAME" />
+            <input class="form-input" name="email" type="email" id="email" placeholder="EMAIL" />
+            <textarea class="form-textarea" name="message" id="message" placeholder="PLEASE TYPE YOUR MESSAGE HERE"></textarea>
+            
+            
           </form>
+          <button  id="contact-us-button" class="btn contact-us-btn" >submit</button>
         </article>
       </div>
     </section>

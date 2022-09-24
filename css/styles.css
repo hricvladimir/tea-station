@@ -594,7 +594,7 @@ p {
     color: var(--clr-grey-5);
 }
 
-.contact-form input, textarea {
+.contact-form .form-input, textarea {
     height: 2.5rem;
     display: block;
     margin: 1rem auto;
@@ -602,20 +602,26 @@ p {
     border: none;
     background: var(--clr-grey-10);
     border-radius: var(--radius);
-    letter-spacing: 0.375rem;
+    letter-spacing: 0.3rem;
     font-size: 1rem;
     padding: 1rem;
 }
 
-.contact-form textarea {
+.contact-form .form-textarea {
     resize: vertical;
     margin-bottom: 2rem;
+    height: 15rem;
+}
+
+#contact-email {
+    text-transform: lowercase;
 }
 
 .contact-us-btn {
     width: 100%;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    background: var(--clr-primary);
 }
 
 @media screen and (min-width:567px) {
