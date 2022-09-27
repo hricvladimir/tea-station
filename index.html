@@ -314,14 +314,17 @@
         <!-- contact form -->
         <article class="contact-form">
           <h3>contact us</h3>
-          <form>
-            <input class="form-input" name="name" type="text" id="name" placeholder="NAME" />
-            <input class="form-input" name="email" type="email" id="email" placeholder="EMAIL" />
-            <textarea class="form-textarea" name="message" id="message" placeholder="PLEASE TYPE YOUR MESSAGE HERE"></textarea>
-            
+          <form action="https://formsubmit.co/hric.vladko@gmail.com" method="POST">
+            <input class="form-input" name="name" type="text" id="name" placeholder="NAME" required/>
+            <input class="form-input" name="email" type="email" id="email" placeholder="EMAIL" required/>
+            <textarea class="form-textarea" name="message" id="message" placeholder="PLEASE TYPE YOUR MESSAGE HERE" required></textarea>
+            <button type="submit" class="btn contact-us-btn" >submit</button>
+            <input type="hidden" name="_next" value="https://tea-station-gody.netlify.app/response.html">
+            <input type="hidden" name="_subject" value="New submission!">
+            <input type="hidden" name="_autoresponse" value="Thank you for contacting us! We will respond to you in 3-5 business days.">
             
           </form>
-          <button  id="contact-us-button" class="btn contact-us-btn" >submit</button>
+          
         </article>
       </div>
     </section>
